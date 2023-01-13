@@ -1,7 +1,18 @@
 package com.luiz.primeiroexemplo.model;
 
-public class Produto {
+import org.springframework.data.annotation.Id;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+@Entity
+public class Produto {
+    
+    
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
     private Integer id;
 
     private String nome;

@@ -14,3 +14,5 @@ Service de produto:
 
 controlller produto: 
     obtertodos, obterPorId, adicionar, atualizar, deletar
+
+conectar  a api a um banco de daos 
