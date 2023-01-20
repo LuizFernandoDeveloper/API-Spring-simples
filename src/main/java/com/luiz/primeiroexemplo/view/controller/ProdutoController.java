@@ -33,12 +33,9 @@ public class ProdutoController {
     @GetMapping
     public  ResponseEntity<List<ProdutoResponse>> obterTodos(){
         List<ProdutoDTO> produtos =  produtoService.obterTodos();
-
         ModelMapper  mapper = new ModelMapper();
-
         List<ProdutoResponse> resposta = produtos.stream().map(produtosDTO -> mapper
         .map(produtosDTO, ProdutoResponse.class)).collect(Collectors.toList());
-
         return new ResponseEntity<>(resposta, HttpStatus.OK);
     }
 
@@ -75,9 +72,5 @@ public class ProdutoController {
         produtoDTO = produtoService.atualizar(id, produtoDTO);
         return new ResponseEntity<>(mapper.map(produtoDTO, ProdutoResponse.class), HttpStatus.OK);
     }
-
-
-
-
 
 }
