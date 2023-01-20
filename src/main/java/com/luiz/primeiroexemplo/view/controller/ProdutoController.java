@@ -1,4 +1,4 @@
-package com.luiz.primeiroexemplo.controller;
+package com.luiz.primeiroexemplo.view.controller;
 
 import java.util.List;
 import java.util.Optional;
