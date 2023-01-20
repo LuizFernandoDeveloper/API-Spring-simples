@@ -38,7 +38,6 @@ public class ProdutoController {
         .map(produtosDTO, ProdutoResponse.class)).collect(Collectors.toList());
         return new ResponseEntity<>(resposta, HttpStatus.OK);
     }
-
     @PostMapping
     public ResponseEntity<ProdutoResponse> adicionar(@RequestBody ProdutoRequest produtoRequest){
         ModelMapper mapper = new ModelMapper();
